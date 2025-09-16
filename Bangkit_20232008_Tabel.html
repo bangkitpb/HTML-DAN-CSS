@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Layout dengan Tabel</title>
+  <style>
+    :root{
+      --border:#d6a65a;
+      --header:#fde7c9;
+      --nav:#dbefff;
+      --main:#f6d6d6;
+      --aside:#dff0df;
+      --footer:#fde7c9;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Calibri, Segoe UI, sans-serif;color:#222}
+
+    table{
+      width: 500px;
+      max-width: 900px;
+      margin:20px auto;
+      border-collapse:collapse;
+      border:1px solid var(--border);
+    }
+    td{
+      border:1px solid var(--border);
+      vertical-align:top;
+    }
+
+    header {
+      display:block;
+      width:100%;
+      padding:30px;
+      background:var(--header);
+      text-align:center;
+    }
+    nav{
+      display:block;
+      width:100%;
+      padding:10px;
+      background:var(--nav);
+      text-align:center;
+    }
+    footer{
+      display:block;
+      width:100%;
+      padding:10px;
+      background:var(--footer);
+      text-align:center;
+    }
+    
+    td.content {
+      background:var(--main);
+      padding:20px;
+    }
+    
+    main {
+      display:block;
+      width:80%;
+    }
+    aside{
+      display:block;
+      width:120px;
+      padding:30px;
+      background:var(--aside);
+    }
+
+    h1{margin-bottom:12px;font-size:24px}
+    .lead{max-width:420px;line-height:1;font-size:15px}
+
+    .menu-title{font-weight:700;padding-right:10px}
+    ul{padding-left:28px}
+    ul li{margin:8px;line-height:0.5;}
+
+    
+    @media(max-width:700px){
+      table, tbody, tr, td{display:block;width:100%}
+      td{border-left:1px solid var(--border);border-right:1px solid var(--border)}
+      aside{order:2}
+      main{order:1}
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td colspan="2"><header>HEADER</header></td>
+    </tr>
+    <tr>
+      <td colspan="2"><nav>NAVIGASI</nav></td>
+    </tr>
+    <tr>
+      <td class="content">
+        <main>
+          <h1>Heading 1</h1>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </main>
+      </td>
+      <td>
+        <aside>
+          <div class="menu-title">Menu:</div>
+          <ul>
+            <li>Home</li>
+            <li>Berita</li>
+            <li>Layanan</li>
+            <li>Kontak</li>
+          </ul>
+        </aside>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><footer>FOOTER</footer></td>
+    </tr>
+  </table>
+</body>
+</html>
