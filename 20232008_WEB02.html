@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .form-container {
+      width: 400px;
+      height: 300px;
+      border: 1px solid #000;
+      padding: 15px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+    .form-group {
+      display: flex;
+      margin-bottom: 10px;
+      align-items: center;
+    }
+    .form-group label {
+      width: 80px;
+      font-weight: bold;
+    }
+    .form-group input,
+    .form-group textarea {
+      flex: 1;
+      padding: 5px;
+    }
+    textarea {
+      height: 80px;
+      resize: vertical;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="your name here">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="your email here">
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea id="address" placeholder="25 Nowhere Street
+Somewhere
+Not Here
+Y2K SRU"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="postcode">Postcode:</label>
+        <input type="text" id="postcode" placeholder="postal code">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
